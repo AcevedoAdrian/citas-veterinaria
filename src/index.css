@@ -1,0 +1,4 @@
+/* Importamos todos los estilos de tailwind en nuestra aplicacion, ya solo queda hacer uso llamando a las clases */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
