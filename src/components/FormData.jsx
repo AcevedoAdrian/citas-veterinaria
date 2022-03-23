@@ -1,6 +1,23 @@
 import { useState, useEffect } from "react";
 
 function FormData() {
+  const [pet, setPet] = useState("");
+  const [owner, setOwner] = useState("");
+  const [email, setEmail] = useState("");
+  const [dataLoad, setDataLoad] = useState("");
+  const [symptoms, setSymptoms] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // validacion de formulario
+    if ([pet, owner, email, dataLoad, symptoms].includes("")) {
+      setError(true);
+      return;
+    }
+    setError(false);
+  };
+
   return (
     <div className="md:w-1/2 lg:w-2/5">
       <h2 className="font-black text-3xl text-center">
@@ -10,13 +27,24 @@ function FormData() {
         Añade Pacientes y{" "}
         <span className="text-indigo-600 font-bold"> Administralos</span>
       </p>
-      <form className="bg-white shadow-sm rounded-lg py-10 px-5 mb-10">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-sm rounded-lg py-10 px-5 mb-10"
+      >
+        {error && (
+          <div className="bg-red-600 text-white text-center p-3 uppercase font0bold mb-3 rounded-md">
+            <p>Todos los campos son obligatorio</p>
+          </div>
+        )}
         <div className="mb-5">
           <label
             className="block text-gray-700 uppercase font-bold"
             htmlFor="pet"
           >
+<<<<<<< HEAD
             {" "}
+=======
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
             Nombre Mascota
           </label>
           <input
@@ -24,6 +52,13 @@ function FormData() {
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="Nombre de la mascota"
+<<<<<<< HEAD
+=======
+            value={pet}
+            onChange={(e) => {
+              setPet(e.target.value);
+            }}
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
 
@@ -32,7 +67,10 @@ function FormData() {
             className="block text-gray-700 uppercase font-bold"
             htmlFor="owner"
           >
+<<<<<<< HEAD
             {" "}
+=======
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
             Nombre Propietario
           </label>
           <input
@@ -40,6 +78,13 @@ function FormData() {
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="Nombre del Propietario"
+<<<<<<< HEAD
+=======
+            value={owner}
+            onChange={(e) => {
+              setOwner(e.target.value);
+            }}
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
@@ -54,19 +99,37 @@ function FormData() {
             type="email"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="correo@correo.com"
+<<<<<<< HEAD
+=======
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
           <label
             className="block text-gray-700 uppercase font-bold"
+<<<<<<< HEAD
             htmlFor="date-load"
+=======
+            htmlFor="dateLoad"
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           >
             Fecha de Alta
           </label>
           <input
-            id="date-load"
+            id="dateLoad"
             type="date"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
+<<<<<<< HEAD
+=======
+            value={dataLoad}
+            onChange={(e) => {
+              setDataLoad(e.target.value);
+            }}
+>>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
@@ -80,6 +143,10 @@ function FormData() {
             id="symptoms"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="Describe los Síntomas"
+            value={symptoms}
+            onChange={(e) => {
+              setSymptoms(e.target.value);
+            }}
           />
         </div>
         <input
