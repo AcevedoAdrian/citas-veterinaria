@@ -1,21 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-function FormData() {
-  const [pet, setPet] = useState("");
-  const [owner, setOwner] = useState("");
-  const [email, setEmail] = useState("");
-  const [dataLoad, setDataLoad] = useState("");
-  const [symptoms, setSymptoms] = useState("");
+function FormData({ patients, setPatients }) {
+  const [pet, setPet] = useState('');
+  const [owner, setOwner] = useState('');
+  const [email, setEmail] = useState('');
+  const [dataLoad, setDataLoad] = useState('');
+  const [symptoms, setSymptoms] = useState('');
   const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // validacion de formulario
-    if ([pet, owner, email, dataLoad, symptoms].includes("")) {
+    if ([pet, owner, email, dataLoad, symptoms].includes('')) {
       setError(true);
       return;
     }
     setError(false);
+    // crear nuevo paciente
+    const newPatient = {
+      pet,
+      owner,
+      email,
+      dataLoad,
+      symptoms,
+    };
+    // agregar nuevo paciente al state
+    setPatients([...patients, newPatient]);
+    // limpiar el formulario
+    setPet('');
+    setOwner('');
+    setEmail('');
+    setDataLoad('');
+    setSymptoms('');
   };
 
   return (
@@ -24,7 +40,7 @@ function FormData() {
         Segimiento de Paciente
       </h2>
       <p className="mt-5 text-lg text-center mb-10">
-        Añade Pacientes y{" "}
+        Añade Pacientes y{' '}
         <span className="text-indigo-600 font-bold"> Administralos</span>
       </p>
       <form
