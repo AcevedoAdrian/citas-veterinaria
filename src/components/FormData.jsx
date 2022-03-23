@@ -41,10 +41,6 @@ function FormData() {
             className="block text-gray-700 uppercase font-bold"
             htmlFor="pet"
           >
-<<<<<<< HEAD
-            {" "}
-=======
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
             Nombre Mascota
           </label>
           <input
@@ -52,13 +48,10 @@ function FormData() {
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="Nombre de la mascota"
-<<<<<<< HEAD
-=======
             value={pet}
             onChange={(e) => {
               setPet(e.target.value);
             }}
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
 
@@ -67,10 +60,6 @@ function FormData() {
             className="block text-gray-700 uppercase font-bold"
             htmlFor="owner"
           >
-<<<<<<< HEAD
-            {" "}
-=======
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
             Nombre Propietario
           </label>
           <input
@@ -78,13 +67,10 @@ function FormData() {
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="Nombre del Propietario"
-<<<<<<< HEAD
-=======
             value={owner}
             onChange={(e) => {
               setOwner(e.target.value);
             }}
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
@@ -99,23 +85,16 @@ function FormData() {
             type="email"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
             placeholder="correo@correo.com"
-<<<<<<< HEAD
-=======
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
           <label
             className="block text-gray-700 uppercase font-bold"
-<<<<<<< HEAD
-            htmlFor="date-load"
-=======
             htmlFor="dateLoad"
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           >
             Fecha de Alta
           </label>
@@ -123,13 +102,10 @@ function FormData() {
             id="dateLoad"
             type="date"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md "
-<<<<<<< HEAD
-=======
             value={dataLoad}
             onChange={(e) => {
               setDataLoad(e.target.value);
             }}
->>>>>>> b364eefdb0a3081910b6160b42c9d957fe26f99d
           />
         </div>
         <div className="mb-5">
